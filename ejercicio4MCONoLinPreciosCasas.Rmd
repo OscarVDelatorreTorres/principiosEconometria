@@ -1,0 +1,50 @@
+---
+title: "Ejercicio de modelado de precios y precio por metro cudrado (modelos no lineales)."
+author: "[su nombre]"
+date: "10/6/2020"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: TRUE
+    includes:
+      in_header: header.html    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+if (!require(devtools)) {install.packages('devtools')
+  library(devtools)} else {library(devtools)}
+if (!require(stargazer)) {install.packages('stargazer')
+  library(stargazer)} else {library(stargazer)}
+if (!require(stargazer)) {install.packages('stargazer')
+  library(stargazer)} else {library(stargazer)}
+if (!require(plotly)) {install.packages('plotly')
+  library(plotly)} else {library(plotly)}
+if (!require(forecast)) {install.packages('forecast')
+  library(forecast)} else {library(forecast)}
+if (!require(tseries)) {install.packages('tseries')
+  library(tseries)} else {library(tseries)}
+if (!require(kableExtra)) {install.packages('kableExtra')
+  library(kableExtra)} else {library(kableExtra)}
+if (!require(qpcR)) {install.packages('qpcR')
+  library(qpcR)} else {library(qpcR)}
+```
+
+# Introducción
+ 
+En este ejercicio se hará una regresión múltiple con el ejemplo de Carter-Hill et. al. (2011) de la relación entre el precio de una casa (price) y la superficie en pies cuadrados (sqft). *A priori* se sabe que el precio de las casas del estrato "residencial" tienen un precio mayor poe metro cuadrado. Esto lleva a potenciales no linealidades en el comportamiento de los precios. Veamos los primeros 10 datos de entrada:
+
+```{r tabla1, echo=FALSE, warning=FALSE, message=FALSE}
+br=read.xlsx("datos/br.xlsx")
+kable(br[1:10,],caption="Tabla de datos deprecios de casas y metros cuadrados")%>%kable_styling(font_size = 10,bootstrap_options = c("striped", "hover"))%>%add_footnote("Cifras en USD.")
+```
+
+Se pide estimar las siguinetes ecuaciones en la forma funcional correcta:
+
+$$PRICE_i=\alpha+\beta_1\cdot SQFT_i+\varepsilon_t$$
+
+$$PRICE_i=\alpha+\beta_1\cdot SQFT_i+\beta_2\cdot POOL_i+\varepsilon_t$$
+
+Determine la mejor forma funcional y compare cada opción en una tabla para cada ecuación. Esto utilizando los criterios de información, así como el coeficiente $R^2_{ajustado}$.
