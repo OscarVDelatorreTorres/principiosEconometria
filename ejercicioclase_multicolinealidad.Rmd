@@ -1,0 +1,82 @@
+---
+title: "Ejercicio 1 en clase de multicolinealidad"
+author: "Dr. Oscar De la Torre"
+date: "10/10/2018"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+    number_sections: yes
+  word_document:
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    number_sections: yes    
+    toc: yes
+    toc_depth: 3
+    fig_caption: yes
+fontsize: 12pt
+lang: es
+font: times new roman 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!require(openxlsx)) {install.packages('openxlsx')
+  library(openxlsx)} else {library(openxlsx)}
+if (!require(plotly)) {install.packages('plotly')
+  library(plotly)} else {library(plotly)}
+if (!require(ggcorrplot)) {install.packages('ggcorrplot')
+  library(ggcorrplot)} else {library(ggcorrplot)}
+library(car)
+library(stargazer)
+```
+
+```{r funcionesCritInfo, echo=FALSE}
+Akaike.crit=function(object){
+  k=length(object$coefficients)
+  llf=logLik(object)
+  aic=(2*k)-(2*llf)
+  return(aic)
+}
+
+schwartz.crit=function(object){
+  k=length(object$coefficients)
+  n=length(object$residuals)
+  llf=logLik(object)
+  
+  bic=(log(n)*k)-(2*llf)
+  return(bic)
+}
+
+hq.crit=function(object){
+  k=length(object$coefficients)
+  n=length(object$residuals)
+  llf=logLik(object)
+  
+  hq=(-2*llf)+(2*(log(log(n))))
+  return(hq)
+}
+
+```
+
+# Introducción
+
+En este ejercicio vamos a trabajar con la detección de la multicolinealidad y de su corrección. Para esto, trabajaremos con los datos del estudio de Longley presentado en [@Gujarati2010]. Como punto de partida, correremos la regresión con la siguiente forma funcional:
+
+$$\text{Deflactor_PIB}=\alpha+\beta_1\cdot +\beta_2\cdot\text{personas_trabajando}_{i} \text{PIB_nominal}+\beta_3\cdot \text{Trabajadores_notrabajo}+\beta_4\cdot \text{Militares}+\beta_5\cdot \text{No_PEA}+\varepsilon_i$$
+
+```{r Datos}
+Datos=read.xlsx("https://www.dropbox.com/s/qa38xpuby0p8u48/longley.xlsx?raw=1")
+
+```
+
+Realizamos el modelo solicitado:
+
+
+Ejemplo de ggcorr:
+
+Calculamos el VIF para el modelo
+`
+
