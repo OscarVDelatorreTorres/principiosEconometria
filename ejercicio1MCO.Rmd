@@ -11,8 +11,6 @@ if (!require(devtools)) {install.packages('devtools')
   library(devtools)} else {library(devtools)}
 if (!require(stargazer)) {install.packages('stargazer')
   library(stargazer)} else {library(stargazer)}
-if (!require(stargazer)) {install.packages('stargazer')
-  library(stargazer)} else {library(stargazer)}
 if (!require(kableExtra)) {install.packages('kableExtra')
   library(kableExtra)} else {library(kableExtra)}
 if (!require(ggplot2)) {install.packages('ggplot2')
@@ -63,5 +61,12 @@ Con summary en lugar de stargazer:
 ```{r}
 
 ```
+
+# Funciones plot del objeto lm
+
+```{r}
+
+```
+
 # Análisis de resultados y conclusiones
 
