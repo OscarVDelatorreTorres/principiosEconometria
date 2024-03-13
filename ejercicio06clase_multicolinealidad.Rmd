@@ -34,30 +34,7 @@ library(stargazer)
 ```
 
 ```{r funcionesCritInfo, echo=FALSE}
-Akaike.crit=function(object){
-  k=length(object$coefficients)
-  llf=logLik(object)
-  aic=(2*k)-(2*llf)
-  return(aic)
-}
-
-schwartz.crit=function(object){
-  k=length(object$coefficients)
-  n=length(object$residuals)
-  llf=logLik(object)
-  
-  bic=(log(n)*k)-(2*llf)
-  return(bic)
-}
-
-hq.crit=function(object){
-  k=length(object$coefficients)
-  n=length(object$residuals)
-  llf=logLik(object)
-  
-  hq=(-2*llf)+(2*(log(log(n))))
-  return(hq)
-}
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/econometricsFunctions/main/intormationCriteria.R")
 
 ```
 

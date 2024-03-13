@@ -22,6 +22,8 @@ if (!require(openxlsx)) {install.packages('openxlsx')
 if (!require(Quandl)) {install.packages('Quandl')
   library(Quandl)} else {library(Quandl)}
 
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/econometricsFunctions/main/intormationCriteria.R")
+
 ```
 
 # Introducción

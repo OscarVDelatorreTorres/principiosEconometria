@@ -27,6 +27,8 @@ if (!require(qpcR)) {install.packages('qpcR')
   library(qpcR)} else {library(qpcR)}
 if (!require(openxlsx)) {install.packages('openxlsx')
   library(openxlsx)} else {library(openxlsx)}
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/econometricsFunctions/main/intormationCriteria.R")
+
 ```
 
 # Introducción

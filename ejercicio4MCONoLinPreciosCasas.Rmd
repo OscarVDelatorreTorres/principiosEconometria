@@ -30,6 +30,8 @@ if (!require(kableExtra)) {install.packages('kableExtra')
   library(kableExtra)} else {library(kableExtra)}
 if (!require(qpcR)) {install.packages('qpcR')
   library(qpcR)} else {library(qpcR)}
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/econometricsFunctions/main/intormationCriteria.R")
+
 ```
 
 # Introducción
