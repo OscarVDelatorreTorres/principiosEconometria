@@ -40,7 +40,7 @@ Esto para estimar la media condicional ($\widehat{\text{Gasto}_i}$) del gasto co
 Para esto se cargan los datos `food` del libro de Carter-Hill (2011), capítulo 2 como se aprecia a continuación en las primeras 15 observaciones del objeto `food`:
 
 ```{r datos, echo=FALSE}
-Datos=read.xlsx("https://www.dropbox.com/s/psjm5stmq7ry18y/food.xlsx?raw=1")
+Datos=read.xlsx("datos/food.xlsx")
 kable(Datos[1:15,],caption = "Datos de ingreso y consumo del ejercicio de Carter-Hill et.al.")%>%kable_styling(font_size = 12,bootstrap_options = c("striped", "hover"))%>%add_footnote("Fuente: Carter-Hill et. al. (2011)")%>%
 column_spec(1:2, width_min = "2cm")
 ```

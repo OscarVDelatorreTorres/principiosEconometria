@@ -68,7 +68,7 @@ En este ejercicio vamos a trabajar con la detección de la multicolinealidad y d
 $$\text{Deflactor_PIB}=\alpha+\beta_1\cdot +\beta_2\cdot\text{personas_trabajando}_{i} \text{PIB_nominal}+\beta_3\cdot \text{Trabajadores_notrabajo}+\beta_4\cdot \text{Militares}+\beta_5\cdot \text{No_PEA}+\varepsilon_i$$
 
 ```{r Datos}
-Datos=read.xlsx("https://www.dropbox.com/s/qa38xpuby0p8u48/longley.xlsx?raw=1")
+Datos=read.xlsx("datos/longley.xlsx")
 
 ```
 

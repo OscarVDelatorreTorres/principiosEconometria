@@ -66,7 +66,7 @@ Variables
 4. Consumo: Consumo personal
 
 ```{r cars}
-Datos=read.xlsx("https://www.dropbox.com/s/kk0oymy0bh0zrkk/Table.xlsx?raw=1")
+Datos=read.xlsx("datos/Table.xlsx")
 Datos$Date=as.Date(Datos$Date,origin="1890-12-30")
 
 ```
