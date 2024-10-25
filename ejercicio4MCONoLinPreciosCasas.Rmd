@@ -1,5 +1,5 @@
 ---
-title: "Ejercicio de modelado de precios y precio por metro cudrado (modelos no lineales)."
+title: "Ejercicio de modelado de precios y precio por metro cuadrado (modelos no lineales)."
 author: "[su nombre]"
 date: "10/6/2020"
 output: 
@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Carga o instala las librerías necesarias:
 
 source("https://raw.githubusercontent.com/OscarVDelatorreTorres/principiosEconometria/refs/heads/main/libreriasEconometria.R")
+
 ```
 
 # Introducción

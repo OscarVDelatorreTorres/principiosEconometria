@@ -1,6 +1,7 @@
 
 # Carga librerías y comandos necesarios apra la clase de Econometría:
-  
+if (!require(rgl)) {install.packages('rgl')
+  library(rgl)} else {library(rgl)}
 if (!require(devtools)) {install.packages('devtools')
     library(devtools)} else {library(devtools)}
 if (!require(stargazer)) {install.packages('stargazer')
