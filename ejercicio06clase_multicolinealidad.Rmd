@@ -34,7 +34,10 @@ library(stargazer)
 ```
 
 ```{r funcionesCritInfo, echo=FALSE}
-source("https://raw.githubusercontent.com/OscarVDelatorreTorres/econometricsFunctions/main/intormationCriteria.R")
+knitr::opts_chunk$set(echo = TRUE)
+# Carga o instala las librerías necesarias:
+
+source("https://raw.githubusercontent.com/OscarVDelatorreTorres/principiosEconometria/refs/heads/main/libreriasEconometria.R")
 
 ```
 
