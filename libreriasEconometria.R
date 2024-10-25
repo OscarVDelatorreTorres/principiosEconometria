@@ -1,5 +1,5 @@
 
-$ Carga librerías y comandos necesarios apra la clase de Econometría:
+# Carga librerías y comandos necesarios apra la clase de Econometría:
   
   if (!require(devtools)) {install.packages('devtools')
     library(devtools)} else {library(devtools)}
