@@ -1,7 +1,7 @@
 
 # Carga librerías y comandos necesarios apra la clase de Econometría:
   
-  if (!require(devtools)) {install.packages('devtools')
+if (!require(devtools)) {install.packages('devtools')
     library(devtools)} else {library(devtools)}
 if (!require(stargazer)) {install.packages('stargazer')
   library(stargazer)} else {library(stargazer)}
